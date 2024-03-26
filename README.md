@@ -16,7 +16,7 @@ PyTorch 2.2.1
 (2) Download the repo
 ```
 git clone https://github.com/rezafotohi/FedAnilPlus.git
-cd FedAnil+
+cd FedAnilPlus
 ```
 (3) Create a new conda environment with Python 3.10
 ```
@@ -48,7 +48,7 @@ pip3 install bitarray
 ```
 (9) Install TenSEAL
 ```
-pip install git+https://github.com/OpenMined/TenSEAL.git#egg=tenseal
+pip3 install git+https://github.com/OpenMined/TenSEAL.git#egg=tenseal
 ```
 
 (10) Run FedAnil+ Simulation
