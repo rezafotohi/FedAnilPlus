@@ -4,9 +4,9 @@
 ## Introduction
 <p align="justify"> In intelligent enterprises, machine learning-based models are adopted to extract insights from data. Due to these traditional models' efficiency and privacy challenges, a new paradigm called federated learning (FL) has emerged. In FL, multiple enterprises can jointly train a model to update a final model. However, firstly, FL-trained models usually perform worse than centralized models, especially when the training data is non-IID (Independent and Identically Distributed) in enterprises. Second, due to the centrality of FL and the untrustworthiness of local enterprises, traditional FL solutions are vulnerable to poisoning and inference attacks and violate privacy. Thirdly, the continuous transfer of parameters between enterprises and servers increases communication costs. Therefore, to this end, the FedAnil+ model is proposed, a novel lightweight, and secure Federated Deep Learning Model that includes three main phases. In the first phase, the goal is to solve the data type distribution skew challenge. Addressing privacy concerns against poisoning and inference attacks is given in the second phase. Finally, to alleviate the communication overhead, a novel compression approach is proposed that significantly reduces the size of the updates. </p>
 
-For detailed explanations, please refer to the [*Decentralized and Robust Privacy-Preserving Model Using Blockchain-Enabled Federated Deep Learning in Intelligent Enterprises*](https://ieeexplore.ieee.org/abstract/document/10128790).
+For detailed explanations, please refer to the [*A Lightweight and Secure Deep Learning Model for Privacy-Preserving Federated Learning in Intelligent Enterprises*](https://ieeexplore.ieee.org/abstract/document/10128790).
 
-## FedAnil Installation
+## FedAnil+ Installation
 (1) Requirments
 ```
 MacBook Pro Apple M1 Pro Chip
@@ -15,13 +15,13 @@ PyTorch 2.2.1
 ```
 (2) Download the repo
 ```
-git clone https://github.com/rezafotohi/FedAnil.git
-cd FedAnil
+git clone https://github.com/rezafotohi/FedAnilPlus.git
+cd FedAnil+
 ```
 (3) Create a new conda environment with Python 3.10
 ```
-conda create -n FedAnil python=3.10
-conda activate FedAnil
+conda create -n FedAnil+ python=3.10
+conda activate FedAnil+
 ```
 (4) Install PyTorch and Jupyter
 ```
@@ -51,7 +51,7 @@ pip3 install bitarray
 pip install git+https://github.com/OpenMined/TenSEAL.git#egg=tenseal
 ```
 
-(10) Run FedAnil Simulation
+(10) Run FedAnil+ Simulation
 ```
 python3 main.py -nd 100 -max_ncomm 50 -ha 80,10,10 -aio 1 -pow 0 -ko 5 -nm 3 -vh 0.08 -cs 0 -B 64 -mn OARF -iid 0 -lr 0.01 -dtx 1 -le 20
 ```
@@ -64,9 +64,9 @@ python3 main.py -nd 100 -max_ncomm 50 -ha 80,10,10 -aio 1 -pow 0 -ko 5 -nm 3 -vh
 
 <p align="justify"> <b>-ha 80,10,10</b>: Role assignment hard-assigned to 80 workers, 10 validators, and 10 miners for each communication round. A <b>*</b> in <b>-ha</b> means the corresponding number of roles is not limited. e.g., <b>-ha *,10,*</b> means at least 5 validators would be assigned in each communication round, and the rest of the enterprises are dynamically and randomly assigned to any role. <b>-ha *,*,*</b> means the role-assigning in each communication round is completely dynamic and random. </p>
 
-<p align="justify"> <b>-aio 1</b>: <i>aio</i> means "all in one network", namely, every enterprise in the simulation has every other enterprise in its peer list. This is to simulate that FedAnil runs on a Permissioned blockchain (consortium blockchain). If using <b>-aio 0</b>, the simulation will let an enterprise (registrant) randomly register with another enterprise (register) and copy the register's peer list. </p>
+<p align="justify"> <b>-aio 1</b>: <i>aio</i> means "all in one network", namely, every enterprise in the simulation has every other enterprise in its peer list. This is to simulate that FedAnil+ runs on a Permissioned blockchain (consortium blockchain). If using <b>-aio 0</b>, the simulation will let an enterprise (registrant) randomly register with another enterprise (register) and copy the register's peer list. </p>
 
-<p align="justify"> <b>-pow 0</b>: The argument of <b>-pow</b> specifies the proof-of-work difficulty. When using 0, FedAnil runs with FedAnil-PoS consensus to select the winning miner. </p>
+<p align="justify"> <b>-pow 0</b>: The argument of <b>-pow</b> specifies the proof-of-work difficulty. When using 0, FedAnil+ runs with FedAnil+-PoS consensus to select the winning miner. </p>
 
 <b>-ko 5</b>: This argument means an enterprise is blacklisted after it is identified as malicious after 6 consecutive rounds as a worker.
 
@@ -99,7 +99,7 @@ Please see <i>main.py</i> for other argument options.
 ## Issues
 <p align="justify"> If you use a GPU with a RAM of less than 16GB, you may encounter the issue of <b>CUDA out of memory</b>. The reason causing this issue may be that the local model updates (i.e., neural network models) stored inside the blocks occupy the CUDA memory and cannot be automatically released because the memory taken in CUDA increases as the communication round progresses. A few solutions have been tried without luck. </p>
 
-<p align="justify"> A temporary solution is to specify <b>-dtx 1</b>. This argument lets the program delete the transactions stored inside of the last block to release the CUDA memory as much as possible. However, specifying <b>-dtx 1</b> will also turn off the chain-resyncing functionality as the resyncing process requires enterprises to reperform global model updates based on the transactions stored inside of the resynced chain, which has empty transactions in each block. As a result, using GPU should only emulate the situation that FedAnil runs in its most ideal situation, that is, every available transaction would be recorded inside of the block of each round, as specified by the default arguments. </p>
+<p align="justify"> A temporary solution is to specify <b>-dtx 1</b>. This argument lets the program delete the transactions stored inside of the last block to release the CUDA memory as much as possible. However, specifying <b>-dtx 1</b> will also turn off the chain-resyncing functionality as the resyncing process requires enterprises to reperform global model updates based on the transactions stored inside of the resynced chain, which has empty transactions in each block. As a result, using GPU should only emulate the situation that FedAnil+ runs in its most ideal situation, that is, every available transaction would be recorded inside of the block of each round, as specified by the default arguments. </p>
 
 Use [GitHub issues](https://github.com/tensorflow/federated/issues) for tracking
 requests and bugs.
@@ -113,10 +113,10 @@ Linkedin: https://www.linkedin.com/in/reza-fotohi-b433a169/
 
 ## Citation
 
-If you publish work that uses FedAnil, please cite FedAnil as follows:
+If you publish work that uses FedAnil+, please cite FedAnil+ as follows:
 
 ```bibtex
-@article{2024fedanil,
+@article{2024FedAnil+,
   title={Decentralized and Robust Privacy-Preserving Model Using Blockchain-Enabled Federated Deep Learning in Intelligent Enterprises},
   author={R. Fotohi, F. S. Aliee, and B. Farahani},
   journal={Under Review!},
@@ -125,8 +125,8 @@ If you publish work that uses FedAnil, please cite FedAnil as follows:
 ```
 
 ## Acknowledgments
-(1) The code of the Blockchain Architecture used in FedAnil is inspired  [*Fully functional blockchain application implemented in Python from scratch*](https://github.com/satwikkansal/python_blockchain_app) by Satwik Kansal.
+(1) The code of the Blockchain Architecture used in FedAnil+ is inspired  [*Fully functional blockchain application implemented in Python from scratch*](https://github.com/satwikkansal/python_blockchain_app) by Satwik Kansal.
 
-(2) The code of the Validation and Consensus scheme used in FedAnil is inspired [*VBFL*](https://github.com/hanglearning/VBFL) by Hang Chen.
+(2) The code of the Validation and Consensus scheme used in FedAnil+ is inspired [*VBFL*](https://github.com/hanglearning/VBFL) by Hang Chen.
 
-(3) The code of the FedAvg used in FedAnil is inspired [*WHDY's FedAvg implementation*](https://github.com/WHDY/FedAvg) by WHDY.
+(3) The code of the FedAvg used in FedAnil+ is inspired [*WHDY's FedAvg implementation*](https://github.com/WHDY/FedAvg) by WHDY.
