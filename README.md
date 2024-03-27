@@ -7,56 +7,77 @@
 For detailed explanations, please refer to the [*A Lightweight and Secure Deep Learning Model for Privacy-Preserving Federated Learning in Intelligent Enterprises*](https://ieeexplore.ieee.org/abstract/document/10128790).
 
 ## FedAnil+ Installation
-(1) Requirments
-```
-MacBook Pro Apple M1 Pro Chip
-Python 3.10
-PyTorch 2.2.1
-```
-(2) Download the repo
+## Requirements
+
+### OS
+
+| Windows | Linux | MacOS |
+|:--:|:--:|:--:|
+| :x: | :heavy_check_mark: | :heavy_check_mark: |
+
+### Python
+
+| `3.9` | `3.10` | `3.11` | `3.12` |
+| ------|-------|-------|-------|
+| :x: | :heavy_check_mark: | :x: | :x: |
+
+### PyTorch
+
+| `2.1.1` | `2.1.2` | `2.2.0` | `2.2.1` |
+| ------|-------|-------|-------|
+| :x: | :x: | :x: | :heavy_check_mark: |
+
+#### Step 1: Download the repo
 ```
 git clone https://github.com/rezafotohi/FedAnilPlus.git
 cd FedAnilPlus
 ```
-(3) Create a new conda environment with Python 3.10
+
+#### Step 2: Create a new conda environment with Python 3.10
 ```
 conda create -n FedAnil+ python=3.10
 conda activate FedAnil+
 ```
-(4) Install PyTorch and Jupyter
+
+#### Step 3: Install PyTorch and Jupyter
 ```
 conda install pytorch torchvision torchaudio -c pytorch
 conda install -c conda-forge jupyter jupyterlab
 ```
-(5) Is the torch installed successfully or not? Enter the following commands in the terminal:
+
+#### Step 4: Is the torch installed successfully or not? Enter the following commands in the terminal:
 ```
 python3
 import torch
 ```
-(6) Install Pycryptodome and Matplotlib
+
+#### Step 5: Install Pycryptodome and Matplotlib
 ```
 conda install pycryptodome
 conda install matplotlib
 ```
-(7) Install Scikit-Learn
+
+#### Step 6: Install Scikit-Learn
 ```
 pip3 install scikit-learn-extra
 ```
-(8) Install Bitarray
+
+#### Step 7: Install Bitarray
 ```
 pip3 install bitarray
 ```
-(9) Install TenSEAL
+
+#### Step 8: Install TenSEAL
 ```
 pip3 install git+https://github.com/OpenMined/TenSEAL.git#egg=tenseal
 ```
 
-(10) Run FedAnil+ Simulation
+#### Step 9: Run FedAnil+ Simulation
 ```
 python3 main.py -nd 100 -max_ncomm 50 -ha 80,10,10 -aio 1 -pow 0 -ko 5 -nm 3 -vh 0.08 -cs 0 -B 64 -mn OARF -iid 0 -lr 0.01 -dtx 1 -le 20
 ```
 
-## Explanations of arguments:
+## Arguments:
 
 <b>-nd 100</b>: 100 Enterprises.
 
@@ -104,7 +125,7 @@ Please see <i>main.py</i> for other argument options.
 Use [GitHub issues](https://github.com/tensorflow/federated/issues) for tracking
 requests and bugs.
 
-## Contact Email & Question
+## Contact
 Please raise other issues and concerns you found. Thank you!
 
 Email: Fotohi.reza@gmail.com
@@ -123,6 +144,10 @@ If you publish work that uses FedAnil+, please cite FedAnil+ as follows:
   year={2024}
 }
 ```
+
+## Disclaimer
+
+This model is a research work and is provided as it is. We are not responsible for any user action or omission.
 
 ## Acknowledgments
 (1) The code of the Blockchain Architecture used in FedAnil+ is inspired  [*Fully functional blockchain application implemented in Python from scratch*](https://github.com/satwikkansal/python_blockchain_app) by Satwik Kansal.
