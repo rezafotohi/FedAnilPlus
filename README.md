@@ -13,7 +13,7 @@ For detailed explanations, please refer to the [*A Lightweight and Secure Deep L
 
 | Windows | Linux | MacOS |
 |:--:|:--:|:--:|
-| :x: | :heavy_check_mark: | :heavy_check_mark: |
+| :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 
 ### Python
 
