@@ -72,7 +72,12 @@ pip3 install bitarray
 pip3 install git+https://github.com/OpenMined/TenSEAL.git#egg=tenseal
 ```
 
-#### Step 9: Install Cmake (On MacBooks with M1 processor)
+#### Step 9: Install Cmake
+On Windows and Linux:
+```
+Download the latest CMake Mac binary distribution here: https://cmake.org/download/
+```
+On MacBooks with M1 processor:
 ```
 arch -arm64 brew install cmake
 ```
