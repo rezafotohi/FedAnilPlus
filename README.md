@@ -18,13 +18,13 @@ For detailed explanations, please refer to the [*A Lightweight and Secure Deep L
 ### Python
 
 | `3.9` | `3.10` | `3.11` | `3.12` |
-| ------|-------|-------|-------|
+| :------:|:-------:|:-------:|:-------:|
 | :x: | :heavy_check_mark: | :x: | :x: |
 
 ### PyTorch
 
 | `2.1.1` | `2.1.2` | `2.2.0` | `2.2.1` |
-| ------|-------|-------|-------|
+| :------:|:-------:|:-------:|:-------:|
 | :x: | :x: | :x: | :heavy_check_mark: |
 
 #### Step 1: Download the repo
