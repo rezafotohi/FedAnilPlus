@@ -143,13 +143,13 @@ If you publish work that uses FedAnil+, please cite FedAnil+ as follows:
 @article{2024FedAnil+,
   title = {A Lightweight and Secure Deep Learning Model for Privacy-Preserving Federated Learning in Intelligent Enterprises},
   author = {Reza Fotohi and Fereidoon Shams Aliee and Bahar Farahani},
-  journal={Under Review!},
+  journal={IEEE Internet of Things Journal},
   volume = {},
   pages = {},
   year = {2024},
   issn = {},
-  doi = {},
-  url = {},
+  doi = {10.1109/JIOT.2024.3421602},
+  url = {https://ieeexplore.ieee.org/document/10579800},
 }
 ```
 
