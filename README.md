@@ -4,7 +4,7 @@
 ## Introduction
 <p align="justify"> In intelligent enterprises, machine learning-based models are adopted to extract insights from data. Due to these traditional models' efficiency and privacy challenges, a new federated learning (FL) paradigm has emerged. In FL, multiple enterprises can jointly train a model to update a final model. However, firstly, FL-trained models usually perform worse than centralized models, especially when enterprises' training data is non-IID (Independent and Identically Distributed). Second, due to the centrality of FL and the untrustworthiness of local enterprises, traditional FL solutions are vulnerable to poisoning and inference attacks and violate privacy. Thirdly, the continuous transfer of parameters between enterprises and servers increases communication costs. Therefore, to this end, the FedAnil+ model is proposed, a novel, lightweight, and secure Federated Deep Learning Model that includes three main phases. In the first phase, the goal is to solve the data type distribution skew challenge. Addressing privacy concerns against poisoning and inference attacks is given in the second phase. Finally, to alleviate the communication overhead, a novel compression approach is proposed that significantly reduces the size of the updates. </p>
 
-For detailed explanations, please refer to the [*A Lightweight and Secure Deep Learning Model for Privacy-Preserving Federated Learning in Intelligent Enterprises*](https://ieeexplore.ieee.org/document/10579800).
+For detailed explanations, please take a look at the [*A Lightweight and Secure Deep Learning Model for Privacy-Preserving Federated Learning in Intelligent Enterprises*](https://ieeexplore.ieee.org/document/10579800).
 
 ## FedAnil+ Installation
 ## Requirements
@@ -147,7 +147,7 @@ If you publish work that uses FedAnil+, please cite FedAnil+ as follows:
   volume = {},
   pages = {},
   year = {2024},
-  issn = {},
+  issn = {2327-4662},
   doi = {10.1109/JIOT.2024.3421602},
   url = {https://ieeexplore.ieee.org/document/10579800},
 }
